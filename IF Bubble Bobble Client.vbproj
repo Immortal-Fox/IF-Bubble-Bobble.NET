@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AB5D281-54E1-4739-B683-9CA8DD7D8A20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IF_Bubble_Bobble.My.MyApplication</StartupObject>
+    <RootNamespace>IF_Bubble_Bobble</RootNamespace>
+    <AssemblyName>IF Bubble Bobble</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IF Bubble Bobble.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IF Bubble Bobble.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Elements ATH\ElementATH.vb" />
+    <Compile Include="Elements ATH\RectangleATH.vb" />
+    <Compile Include="FonctionsScripts.vb" />
+    <Compile Include="FormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FormAPropos.Designer.vb">
+      <DependentUpon>FormAPropos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FormAPropos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FormConfigurationClavier.Designer.vb">
+      <DependentUpon>FormConfigurationClavier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FormConfigurationClavier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulaires\FormNotesMisesAJour.Designer.vb">
+      <DependentUpon>FormNotesMisesAJour.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulaires\FormNotesMisesAJour.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoteurJeu\Modèles\Niveau.vb" />
+    <Compile Include="MoteurJeu\MoteurATH.vb" />
+    <Compile Include="MoteurJeu\MoteurDebug.vb" />
+    <Compile Include="MoteurJeu\MoteurDessin.vb" />
+    <Compile Include="MoteurJeu\MoteurFactory.vb" />
+    <Compile Include="MoteurJeu\MoteurFonction.vb" />
+    <Compile Include="MoteurJeu\MoteurJeu.vb" />
+    <Compile Include="MoteurJeu\MoteurNiveaux.vb" />
+    <Compile Include="MoteurJeu\MoteurPartie.vb" />
+    <Compile Include="MoteurJeu\MoteurSprites.vb" />
+    <Compile Include="MoteurJeu\MoteurControleurs.vb" />
+    <Compile Include="MoteurJeu\MoteurTextures.vb" />
+    <Compile Include="MoteurJeu\Sprites\Bulles\Bulle.vb" />
+    <Compile Include="MoteurJeu\Sprites\Bulles\BulleNormale.vb" />
+    <Compile Include="MoteurJeu\Sprites\Ennemis\Ennemi.vb" />
+    <Compile Include="MoteurJeu\Sprites\Ennemis\MonstreCagoule.vb" />
+    <Compile Include="MoteurJeu\Sprites\Ennemis\MonstreFou.vb" />
+    <Compile Include="MoteurJeu\Sprites\Ennemis\Zombie.vb" />
+    <Compile Include="MoteurJeu\Sprites\ObjetsRamassable\ObjetsBonusPoints\ObjetBanane.vb" />
+    <Compile Include="MoteurJeu\Sprites\ObjetsRamassable\ObjetRamassable.vb" />
+    <Compile Include="MoteurJeu\Sprites\ObjetsRamassable\ObjetsBonusPoints\ObjetBonusPoints.vb" />
+    <Compile Include="MoteurJeu\Sprites\PersonnageJoueur.vb" />
+    <Compile Include="MoteurJeu\Sprites\Plateformes\Plateforme.vb" />
+    <Compile Include="MoteurJeu\Sprites\Projectiles\EnnemiMort.vb" />
+    <Compile Include="MoteurJeu\Sprites\Projectiles\Projectile.vb" />
+    <Compile Include="MoteurJeu\Sprites\Sprite.vb" />
+    <Compile Include="MoteurJeu\Sprites\TexteFlottant.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Prototypes\FormProtoControleur.Designer.vb">
+      <DependentUpon>FormProtoControleur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prototypes\FormProtoControleur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FormAPropos.resx">
+      <DependentUpon>FormAPropos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FormConfigurationClavier.resx">
+      <DependentUpon>FormConfigurationClavier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaires\FormNotesMisesAJour.resx">
+      <DependentUpon>FormNotesMisesAJour.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prototypes\FormProtoControleur.resx">
+      <DependentUpon>FormProtoControleur.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechehaut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechedroite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechebas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechegauche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controlesetup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyborg2crop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IF Bubble Bobble\Campagnes\Campagne1.txt">
+      <CustomToolNamespace>Campagne</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
